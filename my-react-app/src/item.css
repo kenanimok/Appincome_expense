@@ -1,6 +1,7 @@
-.item{
-     color:blue;
-     text-align: center;
-     list-style-type: none;
-     
+.expense{
+     border:5px solid red;
+}
+.income{
+     border:5px solid green;
+     margin: 10px;
 }

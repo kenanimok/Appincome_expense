@@ -7,7 +7,6 @@ const Transaction =(props)=>{
 
    return (
       <ul>
-
             {items.map((element)=>{
                     return (
                       <Item title={element.title} amount={element.amount} key={element.id}/>  //space operator
