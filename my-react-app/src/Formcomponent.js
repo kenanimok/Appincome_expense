@@ -19,12 +19,10 @@ const Formcomponent =(props)=>{
        }
 
 
-        useEffect(()=>{
-       if(amount !==0){
-            setFormValid(true)
-       }
-          
-        },[amount])
+        useEffect(()=>{          //ดัก effect 
+         const checkData = title.trim().length>0 && amount !== 0    //เช็กค่าว่าง
+        setFormValid(checkData)
+        },[title,amount])
 
     const saveItem =(event)=>{
         event.preventDefault()
