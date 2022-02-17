@@ -15,7 +15,7 @@ const symbol =  amount<0 ?"-":"+"  //เหมือน if else  ?จริง :
   
 Item .propTypes={     //validation
     title:PropTypes.string.isRequired, 
-    amount:PropTypes.number.isRequired
+    amount:PropTypes.number.isRequired  //
 }
 
 export default Item
