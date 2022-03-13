@@ -1,3 +1,4 @@
+import './Formcomponent.css'
 import {useEffect, useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -47,8 +48,7 @@ const Formcomponent =(props)=>{
                           <label> จำนวนเงิน </label>
                           <input type="number" onChange={inputAmount}  value={amount}/>
                       </div>
-
-                        <div> <button type="submit" disabled={!formValid}> เพิ่มข้อมูล</button></div>
+                        <div> <button type="submit" className="btn" disabled={!formValid}> เพิ่มข้อมูล</button></div>
 
                  </form>
             </div>            

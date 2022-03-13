@@ -1,7 +1,10 @@
 .expense{
-     border:5px solid red;
-}
-.income{
-     border:5px solid green;
-     margin: 10px;
-}
+     border: 2px solid rgb(255, 72, 0);
+     border-radius: 12px;
+     padding: 5px;
+ }
+ .income{
+     border: 2px solid rgb(0, 255, 85);
+     border-radius: 12px;
+     padding: 5px;
+   }
