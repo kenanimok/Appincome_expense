@@ -1,6 +1,7 @@
 import './item.css'
 import PropTypes from'prop-types';
 import DataContext from '../data/DataContext';
+import { useContext } from 'react';
 const Item =(props)=>{
 const {title,amount}= props
 
@@ -9,9 +10,6 @@ const symbol =  amount<0 ?"-":"+"  //เหมือน if else  ?จริง :
         return (
 
                 <li className={status}>{title}  <span> {symbol} {amount}</span>
-                <DataContext.Consumer>
-                        {value =><p>{value}</p>}
-                </DataContext.Consumer>
                 </li>
         );
 }

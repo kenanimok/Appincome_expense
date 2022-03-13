@@ -5,13 +5,14 @@ import Formcomponent from './component/Formcomponent';
 import { v4 as uuidv4 } from 'uuid';
 import {useState} from "react";
 import DataContext from './data/DataContext';
+import ReportComponent from './component/ReportComponent';
 
 function App() {
    const desingn = {color:"red",textAlign:"center",fontSize:'1.5rem'}
    const initData = [
-      {id:1,title:"ค่ารักษาพยาบาล",amount:3000},
-      {id:2,title:"ค่านน้ำ",amount:500},
-      {id:3,title:"ค่านม",amount:444}
+      // {id:1,title:"ค่ารักษาพยาบาล",amount:3000},
+      // {id:2,title:"ค่านน้ำ",amount:500},
+      // {id:3,title:"ค่านม",amount:444}
   ]
  
   const [items,setItems] = useState(initData) //กำหนดค่าเริ่มต้นเป็น itnitData เป็น array
@@ -25,9 +26,15 @@ function App() {
   }
 
   return (
-     <DataContext.Provider value={"kenanimok"}>
+     <DataContext.Provider value={
+      {
+         income:50000,
+         expense:-8000
+      }  
+     }>
       <div className="container">
          <h1 style={{coloe:"red",textAlign:"center"}}>โปรแกรมรายรับ รายจ่าย</h1>
+            <ReportComponent/>
             <Formcomponent onAddItem={onAddNewItem}></Formcomponent>
             <Transaction items={items}/>   
       </div>
