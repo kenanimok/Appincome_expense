@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Transaction from './Transaction';
-import Formcomponent from './Formcomponent';
+import Transaction from './component/Transaction';
+import Formcomponent from './component/Formcomponent';
 import { v4 as uuidv4 } from 'uuid';
 import {useState} from "react";
-
-
+import DataContext from './data/DataContext';
 
 function App() {
    const desingn = {color:"red",textAlign:"center",fontSize:'1.5rem'}
@@ -26,16 +25,14 @@ function App() {
   }
 
   return (
+     <DataContext.Provider value={"kenanimok"}>
       <div className="container">
          <h1 style={{coloe:"red",textAlign:"center"}}>โปรแกรมรายรับ รายจ่าย</h1>
-           
-            
             <Formcomponent onAddItem={onAddNewItem}></Formcomponent>
             <Transaction items={items}/>   
-            
-
       </div>
-
+     </DataContext.Provider>
+   
     
 
   );
